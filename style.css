@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"); */
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkgrey;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(25, 26, 26);
+    display: flex;
+}
+
+h1{
+    align-self: center;
+    /* text-shadow:2px 1px #9fa5ce; */
+    font-size: 35px;
+    color: rgb(181, 226, 47);
+    font-weight: bold;
+    animation-name: heading;
+    animation-duration: 6s;
+    position: relative;
+    animation-iteration-count: infinite;
+
+}
+@keyframes heading{
+    /* from{background-color: brown;}
+    to{background-color: yellow;} */
+    0%{left: 0px; top:0px;}
+    25%{ left: 500px; top: 0px;}
+    50%{ left: 500px; top: 0px;}
+    75%{left: 0px; top: 0px;}
+    100%{left: 0px; top: 0px;}
+}
+
+
+.search{
+    margin: 3rem;
+    margin-left: 35rem;
+    background-color: transparent;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 25px;
+    padding: 0.5rem 1rem;
+    box-shadow: 3px 5px 6px 5px;
+}
+
+.search::placeholder{
+    color: rgb(181, 226, 47);
+}
+
+.search:hover{
+    background-color: darkolivegreen;
+}
+
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    background-color: #9fa5ce;
+    border-radius: 5px;
+    box-shadow: 9px 5px 10px 5px ;
+    overflow: hidden;
+    position: relative;
+    margin: 1.0rem;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+}
+.movie{
+    transition: 0.2s ease;
+    }
+    .movie:hover{
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    background-color: gold;
+}
+    
+.movie img{
+    width: 100%;
+}
+
+/* .movie_info{
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+} */
+
+.overview{ 
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
